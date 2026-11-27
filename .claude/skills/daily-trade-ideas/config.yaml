@@ -1,0 +1,38 @@
+# Daily Trade Ideas — personal settings. Edit these; the skill reads them every run.
+
+trader:
+  account_size: 25000          # USD — PLACEHOLDER, set your own
+  risk_per_trade_pct: 1.0      # % of account lost if a stop is hit (0.5–1% is standard)
+  max_position_pct: 20         # cap on any single position's value, % of account
+  max_ideas_per_day: 5
+  max_ideas_per_sector: 2
+  style: swing                 # day | swing | position
+  hold_days: [2, 10]           # planned holding window for swing trades
+  allow_shorts: false          # false → bearish setups shown as "Avoid" instead
+  allow_options: false
+
+market:
+  benchmark: SPY
+  regime_tickers: [SPY, QQQ, IWM, ^VIX, ^TNX, DX-Y.NYB]
+
+sectors:
+  energy:
+    etf: XLE
+    macro: [CL=F, BZ=F, NG=F]
+    tickers: [XOM, CVX, COP, EOG, OXY, SLB, HAL, VLO, MPC, CEG, VST, NRG, CCJ, OKLO, SMR]
+  ai:
+    etf: SMH
+    macro: [NVDA]
+    tickers: [NVDA, AMD, AVGO, TSM, MU, MRVL, ANET, ARM, SMCI, VRT, CRDO, COHR, ASML, DELL, ORCL]
+  software:
+    etf: IGV
+    macro: [^TNX]
+    tickers: [MSFT, CRM, NOW, PLTR, CRWD, PANW, SNOW, DDOG, NET, ZS, MDB, ADBE, INTU, APP, SHOP]
+  space:
+    etf: UFO
+    macro: [ITA]
+    tickers: [RKLB, ASTS, LUNR, PL, RDW, BKSY, IRDM, LMT, NOC, KTOS]
+
+# Open positions the skill should review each day (it never places orders).
+open_positions: []
+#  - {ticker: NVDA, entry: 180.0, stop: 171.5, target: 197.0, shares: 30, opened: 2026-11-20}
